@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Real Estate Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p id="status">Ready</p>
+    <button id="btn-save">Save</button>
+    
+
+    <nav>
+        <button class="tab-btn" data-tab="hook">Hook</button>
+        <button class="tab-btn" data-tab="add">Add</button>
+        <button class="tab-btn" data-tab="browse">Browse</button>
+    </nav>
+
+    <section id="tab-hook">
+        <button id="btn-load">Load</button>
+        <button id="btn-new">New file</button>
+    </section>
+
+    <section id="tab-add" hidden>
+        <div>
+            <label for="add-type">Type</label>
+            <select id="add-type">
+                <option value="apartment">Apartment</option>
+                <option value="house">House</option>
+                <option value="land">Land</option>
+            </select>
+        </div>
+        <div>
+            <label for="add-view">View</label>
+            <select id="add-view">
+                <option value="front-view">front view</option>
+                <option value="middle-view">middle view</option>
+                <option value="back-view">back view</option>
+            </select>
+        </div>
+        <div>
+            <label for="add-size">Size</label>
+            <input id="add-size" type="number" inputmode="numeric" min="0">
+        </div>
+        <div>
+            <label for="add-year">Year built</label>
+            <input id="add-year" type="number" inputmode="numeric" min="0">
+        </div>
+        <div>
+            <label for="add-rooms">Rooms</label>
+            <input id="add-rooms" type="number" inputmode="numeric" min="0">
+        </div>
+        <div>
+            <label for="add-floor">Floor</label>
+            <input id="add-floor" type="number" inputmode="numeric" min="0">
+        </div>
+        <div>
+            <label for="add-unit">Unit number</label>
+            <input id="add-unit" type="text" inputmode="numeric">
+        </div>
+        <div>
+            <label for="add-description">Description</label>
+            <textarea id="add-description"></textarea>
+        </div>
+        <div>
+            <label for="add-empty">Empty</label>
+            <input type="radio" name="is-empty" id="add-empty">
+            <label for="add-not-empty">Not empty</label>
+            <input type="radio" name="is-empty" id="add-not-empty" checked>
+        </div>
+        <div>
+            <label for="add-sell-price">Sell price</label>
+            <input id="add-sell-price" type="number" inputmode="numeric" min="0">
+        </div>
+        <div>
+            <label for="add-rent-price">Rent price</label>
+            <input id="add-rent-price" type="number" inputmode="numeric" min="0">
+        </div>
+        <div>
+            <label for="add-owner-name">Owner name</label>
+            <input id="add-owner-name" type="text">
+        </div>
+        <div>
+            <label for="add-owner-phone">Owner phone</label>
+            <input id="add-owner-phone" type="tel" inputmode="numeric">
+        </div>
+        <button id="btn-add" type="button">Add property</button>
+    </section>
+
+    <section id="tab-browse" hidden>
+        <div>
+            <label for="type-browser">Type</label>
+            <select id="type-browser">
+                <option value="">Any</option>
+                <option value="apartment">Apartment</option>
+                <option value="house">House</option>
+                <option value="land">Land</option>
+            </select>
+        </div>
+        <div>
+            <label for="view-browser">View</label>
+            <select id="view-browser">
+                <option value="">Any</option>
+                <option value="front-view">front view</option>
+                <option value="middle-view">middle view</option>
+                <option value="back-view">back view</option>
+            </select>
+        </div>
+        <div>
+            <label for="min-size-browser">size from</label>
+            <input type="number" inputmode="numeric" id="min-size-browser">
+            <label for="max-size-browser"> to </label>
+            <input type="number" inputmode="numeric" id="max-size-browser">
+        </div>
+        <div>
+            <label for="year-browser">year</label>
+            <input type="number" inputmode="numeric" id="year-browser">
+        </div>
+        <div>
+            <label for="rooms-browser">rooms</3label>
+            <input type="number" inputmode="numeric" id="rooms-browser">
+        </div>
+        <div>
+            <label for="floor-browser">floor</label>
+            <input type="number" inputmode="numeric" id="floor-browser">
+        </div>
+        <div>
+            <label for="min-sell-price-browser">sell price from</label>
+            <input type="number" inputmode="numeric" id="min-sell-price-browser">
+            <label for="max-sell-price-browser"> to </label>
+            <input type="number" inputmode="numeric" id="max-sell-price-browser">
+        </div>
+        <div>
+            <label for="min-rent-price-browser">rent price from</label>
+            <input type="number" inputmode="numeric" id="min-rent-price-browser">
+            <label for="max-rent-price-browser"> to </label>
+            <input type="number" inputmode="numeric" id="max-rent-price-browser">
+        </div>
+        <div>
+            <label for="desc-browser">Description</label>
+            <textarea id="desc-browser"></textarea>
+        </div>
+        <div>
+            <label for="owner-name-browser">Owner name</label>
+            <input id="owner-name-browser" type="text">
+        </div>
+        <div>
+            <label for="owner-phone-browser">Owner name</label>
+            <input id="owner-phone-browser" type="tel" inputmode="numeric">
+        </div>
+
+        <p id="browse-count"></p>
+        <div id="browse-list"></div>
+    </section>
+
+    <script src="utils.js"></script>
+    <script src="template.js"></script>
+    <script src="tab-add.js"></script>
+    <script src="browse.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
